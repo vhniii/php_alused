@@ -1,32 +1,29 @@
 <?php
 
 
-// Muutujate defineermine
-
-// $[muutujanimi] = [väärtus];
+// Operaatorid
 
 
-$taisArv = 7;
-$reaalArv = 3.14;
-$sone = '7';
-$toevaartusTrue = true;
-$toevaartusFalse = False;
+$arv1 = 7;
+$arv2 = 24;
 
 
-echo 'Täisarv = '.$taisArv.'<br>';
-echo 'Reaalarv = '.$reaalArv.'<br>';
-echo 'Sõne = '.$sone.'<br>';
-echo 'Tõeväärtus true = '.$toevaartusTrue.'<br>';
-echo 'Tõeväärtus false = '.$toevaartusFalse.'<br>';
+echo '<h4>Matemaatilised operaatorid</h4>'.'<br>';
+
+echo $arv1. ' + '.' = '.($arv1 + $arv2).'<br>';
+echo $arv1. ' - '.' = '.($arv1 - $arv2).'<br>';
+echo $arv1. ' * '.' = '.($arv1 * $arv2).'<br>';
+echo $arv1. ' / '.' = '.($arv1 / $arv2).'<br>';
+echo $arv1. ' % '.' = '.($arv1 % $arv2).'<br>';
 
 
-echo 'Muutuja "sõne" andmetüüp on: '.gettype($sone).'<br>';
-$summa = $sone + $sone.'<br>';
-echo 'Vastus = '.$summa.'<br>';
+echo '<hr>';
 
+echo '<h4>Võrdlusoperaatorid</h4>'.'<br>';
 
-echo gettype($sone).'<br> ';
-settype($sone, 'int').'<br>';
-
-echo 'Andmetüüp on: '.gettype($sone);
-
+echo $arv1.' < '.arv2.' See on '.($arv1 < $arv2).'<br>';
+echo $arv1.' > '.arv2.' See on '.($arv1 > $arv2).'<br>';
+echo $arv1.' <= '.arv2.' See on '.($arv1 <= $arv2).'<br>';
+echo $arv1.' >= '.arv2.' See on '.($arv1 >= $arv2).'<br>';
+echo $arv1.' == '.arv2.' See on '.($arv1 == $arv2).'<br>';
+echo $arv1.' != '.arv2.' See on '.($arv1 != $arv2).'<br>';
