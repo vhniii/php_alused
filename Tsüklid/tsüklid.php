@@ -22,20 +22,23 @@ echo '<h4>Tsüklid - for</h4>';
 
 
 
-$varv = "";
+//$varv = "";
 
 echo '<table>';
-for ($rida = 1; $rida <= 5; $rida++) {
 
-    $varv = '#'.random_int(0,9).random_int(0,9).random_int(0,9).random_int(0,9);
-
+for($rida = 1; $rida <= 5; $rida++){
     echo '<tr>';
-        echo '<td style="background:'.$varv.'">'.DATA.'</td>';
+    for($veerg = 1; $veerg <= 5; $veerg++) {
+        $varv = '#';
+        for($kord = 1; $kord <= 6; $kord++){
+            $varv = $varv.dechex(rand(0,9));
+        }
+        echo '<td style="background: ' . $varv . '">';
+        echo '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
+        echo '</td>';
+    }
     echo '</tr>';
-
 }
-
-
 echo '</table>';
 
 //
