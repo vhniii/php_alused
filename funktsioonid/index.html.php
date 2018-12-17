@@ -86,6 +86,19 @@ word("Hinnakiri");
 print("<p>.Soodsad asjad kogu perele!.</p>");
 
 
+print("<hr>");
+
+
+function text($txt, $size=3){
+
+    #print("<font size="$size">$txt</font>";
+    print("<font size='$size'>$txt<br></font>");
+}
+
+text("Pealkiri", 5);
+text("Alapealkiri", 4);
+text("Paragrahv", 3);
+
 
 ?>
 
