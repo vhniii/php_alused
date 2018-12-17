@@ -65,6 +65,22 @@ function test(){
 
 print("Test muutuja: $testmuutja<br>");
 
+
+print("<hr>");
+
+
+$summa = 55;
+
+function sum(){
+
+    global $summa;
+    print("Summa on: $summa");
+
+}
+
+sum();
+
+
 ?>
 
 
