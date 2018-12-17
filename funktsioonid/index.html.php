@@ -63,7 +63,7 @@ function test(){
 }
 
 
-print("Test muutuja: $testmuutja<br>");
+print("Test muutuja: $testmuutuja<br>");
 
 
 print("<hr>");
