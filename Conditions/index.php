@@ -14,40 +14,26 @@
 
 echo '<h4>Tingimuslaused</h4>';
 
-$arv = rand(0, 100);
+$varv = ['punane', 'kollane', 'roheline', 'must'];
 
-if ($arv >= 0 and $arv < 25) {
+//$foor = "punane";
+$foor = $varv[random_int(0,3)];
 
-    // Roheline
-    $varv = green;
+switch($foor) {
 
-    // Antud arv on paaris ja roheline
-    echo '<p style="color: '.$varv.'">'.$arv.'</p>';
+    case 'punane':
+        echo '<p style="font-size: 25px; text-transform: uppercase; color: red;">Stop!</p>';
+        break;
 
-} elseif ($arv >= 25 and $arv < 50) {
+    case 'kollane':
+        echo '<p style="font-size: 25px; text-transform: uppercase; color: yellow">Valmis olla!</p>';
+        break;
 
-    // Punane
-    $varv = red;
+    case 'roheline':
+        echo '<p style="font-size: 25px; text-transform: uppercase; color: green">Minek!</p>';
+        break;
 
-    echo '<p style="color: '.$varv.'">'.$arv.'</p>';
-
-} elseif ($arv >= 50 and $arv < 75) {
-
-    // Sinine
-    $varv = blue;
-
-    echo '<p style="color: '.$varv.'">'.$arv.'</p>';
-
-} elseif ($arv >= 75 and $arv < 100) {
-
-    // Orange
-    $varv = orange;
-
-    echo '<p style="color: '.$varv.'">'.$arv.'</p>';
-
-} else {
-
-
-    echo '<p>'.$arv.'</p>';
-
+    default:
+        echo '<p style="font-size: 25px; text-transform: uppercase;"> Sellist värvi fooris ei ole!</p>';
+        break;
 }

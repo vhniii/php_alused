@@ -15,9 +15,7 @@
 
 
 <?php
-
 echo 'See tekst on HTML sees'.'<br>';
-
 ?>
 
 </body>

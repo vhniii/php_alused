@@ -53,6 +53,18 @@ function tere(){
 $func_holder = "tere";
 $func_holder();
 
+print("<hr>");
+
+
+function test(){
+
+    $testmuutuja = "See on testmuutuja";
+
+}
+
+
+print("Test muutuja: $testmuutja<br>");
+
 ?>
 
 
