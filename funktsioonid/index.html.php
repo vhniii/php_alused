@@ -69,16 +69,22 @@ print("Test muutuja: $testmuutuja<br>");
 print("<hr>");
 
 
-$summa = 55;
+$summa = 0;
 
-function sum(){
+function word($txt){
 
     global $summa;
-    print("Summa on: $summa");
+    $summa++;
+    print("<h1>$summa.$txt </h1>");
 
 }
 
-sum();
+word("Tooted");
+print("<p>.Meie tootevalikus on tooteid igale inimesele.</p>");
+
+word("Hinnakiri");
+print("<p>.Soodsad asjad kogu perele!.</p>");
+
 
 
 ?>
