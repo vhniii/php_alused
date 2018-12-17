@@ -100,6 +100,21 @@ text("Alapealkiri", 4);
 text("Paragrahv", 3);
 
 
+
+print("<hr>");
+
+function addFive($number){
+
+    $number += 5;
+
+}
+
+$orignum = 10;
+addFive($orignum);
+print($orignum);
+
+
+
 ?>
 
 
