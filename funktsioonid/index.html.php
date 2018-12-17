@@ -41,6 +41,18 @@ function liitmine($num1, $num2){
 
 print ("Liitmise vastus on: ".liitmine(6, 9));
 
+print("<hr>");
+
+
+function tere(){
+
+    print("Tere tulemast!");
+
+}
+
+$func_holder = "tere";
+$func_holder();
+
 ?>
 
 
