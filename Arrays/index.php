@@ -38,4 +38,14 @@ for ($i = 0; $i < count($uuedKasutajad); $i++){
     echo $uuedKasutajad[$i].'<br>';
 
 }
+
+
+echo '<hr>';
+
+foreach($uuedKasutajad as $kasutaja){
+
+    echo $kasutaja.'<br>';
+
+}
+
 //var_dump($kasutajad);
