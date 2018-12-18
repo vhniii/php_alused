@@ -9,15 +9,33 @@ $kasutajad[] = 'Bob';
 
 array_push($kasutajad, 'lucy');
 
-
 // Andmetega massiiv
 
 $lisaKasutajad = array('Mark', 'Geoff');
 
+// Massiivi pikkus
 
-echo '<pre>';
-print_r($kasutajad);
-print_r($lisaKasutajad);
-echo '</pre>';
+$kasutajadKokku = count($kasutajad);
+for ($i = 0; $i < $kasutajadKokku; $i++){
 
+    echo $kasutajad[$i].'<br>';
+
+}
+
+array_shift($kasutajad);
+for ($i = 0; $i < count($kasutajadKokku); $i++){
+
+    echo $kasutajad[$i].'<br>';
+
+}
+
+echo '<br>';
+
+$uuedKasutajad = array_merge($kasutajad, $lisaKasutajad);
+
+for ($i = 0; $i < count($uuedKasutajad); $i++){
+
+    echo $uuedKasutajad[$i].'<br>';
+
+}
 //var_dump($kasutajad);
