@@ -1,4 +1,4 @@
 <?php
 
 
-echo 'Time = '.time();
+echo 'Date: '.date('d.m.Y G:i' , time());
