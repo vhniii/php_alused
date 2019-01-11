@@ -15,3 +15,7 @@ $kuu = $eesti_kuud[date('n')];
 $aasta = date('Y');
 
 echo 'Eestipärane kuupäev: '.$paev.'.'.$kuu.'.'.$aasta.'<br>';
+
+
+$a = mktime(0,0,0,10,22,1995);
+echo 'Muu soovitud kuupäeva genereerimine: '.date('d.m.Y', $a).'<br>';
