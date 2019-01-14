@@ -94,3 +94,27 @@ $car = array(
 echo '<br>';
 
 print $car[mark].' '.$car[mudel].'<br>'.$car[mootor].' '.$car[voimsus].', '.$car[aasta].'a';
+
+echo '<br>';
+echo '<br>';
+echo '<br>';
+
+
+$inimesed = array(
+
+    array(
+        nimi=>"Priit",
+        haridus=>"Keskharidus",
+        elukoht=>"Tartu"
+    ),
+    array(
+
+        nimi=>"Peeter",
+        haridus=>"Põhiharidus",
+        elukoht=>"Põltsamaa"
+    )
+
+);
+
+echo $inimesed[0][nimi].' on pärit '.$inimesed[0][elukoht].'st.<br>';
+echo $inimesed[1][nimi].' on pärit '.$inimesed[1][elukoht].'lt.<br>';
