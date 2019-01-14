@@ -118,3 +118,18 @@ $inimesed = array(
 
 echo $inimesed[0][nimi].' on pärit '.$inimesed[0][elukoht].'st.<br>';
 echo $inimesed[1][nimi].' on pärit '.$inimesed[1][elukoht].'lt.<br>';
+
+
+echo '<br>';
+echo '<br>';
+
+
+$first = array('W', 'e', 'l');
+$second = array('c', 'o', 'm', 'e');
+$third = array_merge($first, $second);
+
+foreach ($third as $val) {
+
+    print "$val<br>";
+
+}
