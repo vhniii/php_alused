@@ -78,3 +78,19 @@ for ($i = 0; $i < count($kliendid); $i++) {
 }
 
 
+echo '<br>';
+
+
+$car = array(
+
+    mark=>"Audi",
+    mudel=>"A6",
+    aasta=>"96",
+    mootor=>"2.5TDI",
+    voimsus=>"85kw"
+
+);
+
+echo '<br>';
+
+print $car[mark].' '.$car[mudel].'<br>'.$car[mootor].' '.$car[voimsus].', '.$car[aasta].'a';
