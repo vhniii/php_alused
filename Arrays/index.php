@@ -1,51 +1,80 @@
 <?php
+$kasutajad = array(
 
-$kasutajad = array(); // Tühi massiiv
+    array(
 
-//Tühja massiivi andmete lisamine
+        'alice',
+        'Alice',
+        'Liddell',
+        'female'
+    ),
 
-$kasutajad[] = 'Alice';
-$kasutajad[] = 'Bob';
+    array(
 
-array_push($kasutajad, 'lucy');
+        'bob',
+        'Bob',
+        'Scott',
+        'male'
 
-// Andmetega massiiv
+    )
 
-$lisaKasutajad = array('Mark', 'Geoff');
 
-// Massiivi pikkus
+);
 
-$kasutajadKokku = count($kasutajad);
-for ($i = 0; $i < $kasutajadKokku; $i++){
+echo '<table style="border: 1px solid #000; border-collapse: collapse; padding: 5px 10px;">';
+echo '<th style="border: 1px solid #000; padding: 5px 10px;">Kasutaja</th>';
+echo '<th style="border: 1px solid #000; padding: 5px 10px;">Nimi</th>';
+echo '<th style="border: 1px solid #000; padding: 5px 10px;">Eesnimi</th>';
+echo '<th style="border: 1px solid #000; padding: 5px 10px;">Sugu</th>';
 
-    echo $kasutajad[$i].'<br>';
+
+for ($i = 0; $i < count($kasutajad); $i++) {
+    echo '<tbody>';
+    echo '<tr>';
+
+
+    foreach ($kasutajad[$i] as $info) {
+        echo '<td style="border: 1px solid #000; padding: 5px 10px;">';
+        if ($kasutajad[$i][3] == 'female'){
+
+            echo '<div style="color: red;">';
+        } else {
+
+            echo '<div style="color: blue;">';
+
+        }
+
+        echo $info.'<br>';
+        echo '</td>';
+
+    }
+    echo '</tr>';
+    echo '</tbody>';
+    echo '<hr>';
+    echo '</table>';
 
 }
 
-array_shift($kasutajad);
-for ($i = 0; $i < count($kasutajadKokku); $i++){
-
-    echo $kasutajad[$i].'<br>';
-
-}
-
-echo '<br>';
-
-$uuedKasutajad = array_merge($kasutajad, $lisaKasutajad);
-
-for ($i = 0; $i < count($uuedKasutajad); $i++){
-
-    echo $uuedKasutajad[$i].'<br>';
-
-}
+echo '</table>';
 
 
-echo '<hr>';
+$kliendid = array("Kristjan", "Kalle");
+$kliendid [] = "Malle";
 
-foreach($uuedKasutajad as $kasutaja){
 
-    echo $kasutaja.'<br>';
+
+echo 'Meie kliendid on: ';
+
+for ($i = 0; $i < count($kliendid); $i++) {
+
+    if ($i == 2) {
+
+        echo $kliendid[$i].'.';
+    } else {
+
+        echo $kliendid[$i].', ';
+    }
 
 }
 
-//var_dump($kasutajad);
+
