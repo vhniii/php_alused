@@ -22,6 +22,18 @@
 
 </div>
 
+
+<?php
+
+if (!empty($_GET['leht'])) {
+
+    include($_GET['leht'].'.php');
+
+}
+
+?>
+
+
 <div class="content">
 
     <p>
