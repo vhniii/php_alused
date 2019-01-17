@@ -28,7 +28,9 @@
 if (!empty($_GET['leht'])) {
 
     $leht = htmlspecialchars($_GET['leht']);
-    if (is_file($leht.'.php')){
+    $lubatud = array('kontakt');
+    $kontroll = in_array($leht, $lubatud);
+    if ($kontroll == true){
 
         include($leht.'.php');
 
