@@ -15,9 +15,9 @@
 
     <ul>
         <li><a href="index.php">Avaleht</a></li>
-        <li><a href="tooted.php">Tooted</a></li>
-        <li><a href="hinnakiri.php">Hinnakiri</a></li>
-        <li><a href="kontakt.php">Kontakt</a></li>
+        <li><a href="index.php?leht=tooted">Tooted</a></li>
+        <li><a href="index.php?leht=hinnakiri">Hinnakiri</a></li>
+        <li><a href="index.php?leht=kontakt">Kontakt</a></li>
 
     </ul>
 
@@ -48,7 +48,7 @@ if (!empty($_GET['leht'])) {
 
     if($kontroll == true) {
 
-        include($leht.'.php');
+        include($page.'.php');
 
     } else {
 
