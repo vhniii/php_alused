@@ -27,7 +27,15 @@
 
 if (!empty($_GET['leht'])) {
 
-    include($_GET['leht'].'.php');
+    $leht = htmlspecialchars($_GET['leht']);
+    if (is_file($leht.'.php')){
+
+        include($leht.'.php');
+
+    } else {
+
+        echo 'Lehte ei ole olemas!';
+    }
 
 }
 
