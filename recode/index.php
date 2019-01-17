@@ -17,6 +17,8 @@
     <ul>
         <li><a href="index.php">Avaleht</a></li>
         <li><a href="index.php?leht=kontakt">Kontakt</a></li>
+        <li><a href="index.php?leht=leht1">Leht1</a></li>
+        <li><a href="index.php?leht=leht2">Leht2</a></li>
 
     </ul>
 
@@ -25,19 +27,26 @@
 
 <?php
 
-if (!empty($_GET['leht'])) {
+//if (!empty($_GET['leht'])) {
+//
+//    $leht = htmlspecialchars($_GET['leht']);
+//    $lubatud = array('kontakt');
+//    $kontroll = in_array($leht, $lubatud);
+//    if ($kontroll == true){
+//
+//        include($leht.'.php');
+//
+//    } else {
+//
+//        echo 'Lehte ei ole olemas!';
+//    }
+//
+//}
 
-    $leht = htmlspecialchars($_GET['leht']);
-    $lubatud = array('kontakt');
-    $kontroll = in_array($leht, $lubatud);
-    if ($kontroll == true){
+$leht = $_GET['leht'];
+if(is_numeric($leht)){
 
-        include($leht.'.php');
-
-    } else {
-
-        echo 'Lehte ei ole olemas!';
-    }
+    include('leht'.$leht.'.php');
 
 }
 
