@@ -57,3 +57,8 @@ echo $text[4].'<br>';
 echo substr($text, 3, 8).'<br>';
 echo substr($text, 2, 5).'<br>';
 echo substr($text, -5, 7).'<br>';
+
+echo '<br>';
+echo '<br>';
+
+echo print_r(str_word_count($text, 1));
