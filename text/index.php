@@ -91,3 +91,16 @@ while($leia_tekstist = strpos($tekst, $otsitav, $nihe)){	//4 10 13 48
     echo $leia_tekstist.'<br>';
     $nihe = $leia_tekstist+strlen($otsitav);
 }
+
+echo '<br>';
+echo '<br>';
+echo '<br>';
+echo '<br>';
+
+
+$asendatav = "Aastad pole vennaksed";
+$asendus = "õekesed";
+$otsitav = "vennaksed";
+$asenduse_algus = strpos($asendatav, $otsitav, 0);
+
+echo (substr_replace($asendatav, $asendus, $asenduse_algus, 9));
