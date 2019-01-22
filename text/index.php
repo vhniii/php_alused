@@ -29,3 +29,8 @@ echo "<pre>".trim($textt)."</pre>".'<br>';
 echo "<pre>".ltrim($textt)."</pre>".'<br>';
 echo "<pre>".rtrim($textt)."</pre>".'<br>';
 
+
+echo '<br>';
+echo '<br>';
+
+echo trim($text, "L, r, u..t");
