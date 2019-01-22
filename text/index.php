@@ -43,3 +43,12 @@ $code = '<b>Experience</b> <a href=\"#\">is</a> the teacher <br>of fools';
 
 echo strip_tags($code).'<br>';
 echo strip_tags($code , '<b>, <br>');
+
+
+echo '<br>';
+echo '<br>';
+echo '<br>';
+
+
+echo $text[0].'<br>';
+echo $text[4].'<br>';
