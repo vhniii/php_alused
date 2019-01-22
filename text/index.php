@@ -52,3 +52,8 @@ echo '<br>';
 
 echo $text[0].'<br>';
 echo $text[4].'<br>';
+
+
+echo substr($text, 3, 8).'<br>';
+echo substr($text, 2, 5).'<br>';
+echo substr($text, -5, 7).'<br>';
