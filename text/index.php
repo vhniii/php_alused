@@ -79,3 +79,15 @@ $otsitav = "has";
 
 $leia_tekst = strpos($tekst, $otsitav, 0);
 echo $leia_tekst.'<br>';
+
+echo '<br>';
+echo '<br>';
+echo '<br>';
+
+
+$nihe = 0;
+
+while($leia_tekstist = strpos($tekst, $otsitav, $nihe)){	//4 10 13 48
+    echo $leia_tekstist.'<br>';
+    $nihe = $leia_tekstist+strlen($otsitav);
+}
