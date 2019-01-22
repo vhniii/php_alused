@@ -62,3 +62,7 @@ echo '<br>';
 echo '<br>';
 
 echo print_r(str_word_count($text, 1));
+
+echo '<br>';
+
+echo print_r(str_word_count($text, 2));
