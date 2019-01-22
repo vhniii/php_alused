@@ -34,3 +34,12 @@ echo '<br>';
 echo '<br>';
 
 echo trim($text, "L, r, u..t");
+
+echo '<br>';
+echo '<br>';
+echo '<br>';
+
+$code = '<b>Experience</b> <a href=\"#\">is</a> the teacher <br>of fools';
+
+echo strip_tags($code).'<br>';
+echo strip_tags($code , '<b>, <br>');
