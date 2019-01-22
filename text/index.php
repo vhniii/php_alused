@@ -66,3 +66,16 @@ echo print_r(str_word_count($text, 1));
 echo '<br>';
 
 echo print_r(str_word_count($text, 2));
+
+
+echo '<br>';
+echo '<br>';
+echo '<br>';
+echo '<br>';
+
+
+$tekst = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s";
+$otsitav = "has";
+
+$leia_tekst = strpos($tekst, $otsitav, 0);
+echo $leia_tekst.'<br>';
