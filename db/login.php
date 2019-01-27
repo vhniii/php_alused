@@ -16,5 +16,5 @@ $users = getData($sql, $ikt);
 if($users !== false){
     session_start();
     $_SESSION['user'] = $users[0];
-    header('index.php');
+    header('../db/index.php');
 }
