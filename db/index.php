@@ -1,15 +1,11 @@
 <?php
 
-session_start();
-
-require_once 'login_func.php';
-
+require_once 'conf.php';
+require_once 'db_func.php';
 
 
-if(isset($_SESSION['user'])){
-    echo 'Tere tulemast, '.$_SESSION['user']['surname'].'!<br>';
-    echo '<a href="../db/logout.php">Logi välja</a>';
-} else {
-    $loginForm = htmlFromFile('login');
-    echo $loginForm;
-}
+$iktconn = connect_db('DBHOST', 'DBUSER', 'DBPASS', 'DBNAME');
+
+echo '<pre>';
+print_r($iktconn);
+echo '</pre>';
