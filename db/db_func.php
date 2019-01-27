@@ -24,3 +24,21 @@ function connect_to_db($hostName, $dbUser, $dbPassword, $dbName) {
     return $conn;
 
 }
+
+function query($sql, $conn){
+    $result = mysqli_query($conn, $sql);
+    if(!$result){
+        echo 'Problem with <b>'.$sql.'</b><br>';
+        exit;
+    }
+    return $result;
+}
+function getData($sql, $conn)
+{
+    $data = array();
+    $result = query($sql, $conn);
+    while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+        $data[] = $row;
+    }
+    return $data;
+}
