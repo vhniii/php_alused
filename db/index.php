@@ -20,3 +20,10 @@ print_r($users);
 echo '</pre>';
 
 echo 'Tere, '.$users[0]['forename'].' '.$users[0]['surname'].'<br>';
+
+
+require_once 'fnk.php';
+
+$loginForm = htmlFromFile('login');
+
+echo $loginForm;
