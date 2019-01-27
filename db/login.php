@@ -12,4 +12,9 @@ $ikt = connect_to_db(DBHOST, DBUSER, DBPASS, DBNAME);
 $sql = 'SELECT * FROM users WHERE username="'.$username.'" AND password="'.md5($password).'"';
 $users = getData($sql, $ikt);
 
-echo $users[0]['forename'].' '.$users[0]['surname'];
+
+if($users !== false){
+    session_start();
+    $_SESSION['user'] = $users[0];
+    header('Location: ../index.php');
+}

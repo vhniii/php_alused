@@ -22,8 +22,15 @@ echo '</pre>';
 echo 'Tere, '.$users[0]['forename'].' '.$users[0]['surname'].'<br>';
 
 
-require_once 'fnk.php';
+session_start();
 
-$loginForm = htmlFromFile('login');
+require_once 'login_func.php';
 
-echo $loginForm;
+
+
+if(isset($_SESSION['user'])){
+    echo 'Tere tulemast, '.$_SESSION['user']['last_name'].'!<br>';
+} else {
+    $loginForm = htmlFromFile('login');
+    echo $loginForm;
+}
