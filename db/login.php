@@ -1,7 +1,15 @@
 <?php
 
+require 'conf.php';
+require 'db_func.php';
 
 $username = $_GET['uname'];
 $password = $_GET['upass'];
 
-echo $username.' '.$password;
+
+$ikt = connect_to_db(DBHOST, DBUSER, DBPASS, DBNAME);
+
+$sql = 'SELECT * FROM users WHERE username="'.$username.'" AND password="'.md5($password).'"';
+$users = getData($sql, $ikt);
+
+echo $users[0]['forename'].' '.$users[0]['surname'];
