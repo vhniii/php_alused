@@ -146,3 +146,15 @@ foreach ($first as $val) {
     print"$val<br>";
 
 }
+
+echo '<br>';
+echo '<br>';
+
+
+while (count ($first)) {
+
+    $val = array_shift ($first);
+    print "$val<br>";
+    print "There are ".count($first)." elements in \$first <br>";
+
+}
