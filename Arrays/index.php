@@ -158,3 +158,17 @@ while (count ($first)) {
     print "There are ".count($first)." elements in \$first <br>";
 
 }
+
+
+echo '<br>';
+echo '<br>';
+
+
+
+$sliceme = array('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'i');
+$slice = array_slice($sliceme, 1, 3);
+foreach ($sliceme as $var) {
+
+    print "$var<br>";
+
+}
