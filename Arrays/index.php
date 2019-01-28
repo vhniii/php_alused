@@ -203,4 +203,10 @@ echo '<br>';
 echo '<br>';
 
 
+ksort ($sortme);
+foreach ($sortme as $key => $val) {
+
+    print "$key = $val<br>";
+
+}
 
