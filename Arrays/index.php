@@ -185,3 +185,22 @@ foreach ($sliceme as $key => $val) {
     print "$key = $val<br>";
 
 }
+
+echo '<br>';
+echo '<br>';
+
+$sortme = array("first" => 5, "second" => 2, "third" => 1);
+asort ($sortme);
+
+foreach ($sortme as $key => $val) {
+
+    print "$key = $val<br>";
+
+}
+
+
+echo '<br>';
+echo '<br>';
+
+
+
