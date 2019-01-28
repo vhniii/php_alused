@@ -133,3 +133,16 @@ foreach ($third as $val) {
     print "$val<br>";
 
 }
+
+echo '<br>';
+echo '<br>';
+
+
+$sum = array_push($first, 1, 2, 3);
+print "There are total of $sum elements in \$first<P>";
+
+foreach ($first as $val) {
+
+    print"$val<br>";
+
+}
