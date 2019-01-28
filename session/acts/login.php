@@ -20,5 +20,5 @@ $users = getData($sql, $ikt);
 if($users !== false){
     session_start();
     $_SESSION['user'] = $users[0];
-    header('Location: index.php');
+    header('Location: ../index.php');
 }
