@@ -1,5 +1,79 @@
+
+<html>
+
+<head>
+
+    <title>PHP - Tekstifunktsioonid</title>
+
+</head>
+
+<body>
+
+<h1> Ülesanne 9 </h1>
+
+
 <?php
 
+$ename = $_GET['textfield'];
+$ees = $_GET['ees'];
+$pere = $_GET['pere'];
+
+
+
+?>
+
+Sisestage oma nimi (suured-väiksed tähemärgid segamini) ja vajutage enterit.<br>
+Sõnad "noob", "kurat", "lol" asendatakse tärnidega!<br>
+<br>
+
+<form method="get">
+
+Nimi: <input type="text" name="textfield" autocomplete="off">
+
+</form>
+<br>
+    <?php
+
+    echo 'Tere, '.ucfirst(strtolower($ename)).'!<br>';
+
+    echo chunk_split(strtoupper($ename), 1, '.').'<br>';
+
+
+    $otsime = array('noob', 'kurat', 'lol');
+    $dots = '****';
+
+    echo 'Sõnum: '.str_replace($otsime, $dots,  $ename).'<br>';
+
+    echo '<hr>';
+
+    ?>
+
+    <form>
+
+    Sisestage eesnimi ja perekonnanima: <br>
+    <input type="text" name="ees" autocomplete="off">
+<!--    <input type="text" name="pere" autocomplete="off">-->
+    <input type="submit" value="Saada">
+
+    </form>
+
+    <?php
+
+    $email = "@hkhk.edu.ee";
+    $replace_in_email = array('õ', 'ä', 'ö', 'ü', 'Õ', 'Ä', 'Ö', 'Ü', ' ja ');
+    $replace_with = array('o', 'a', 'o', 'y', 'O', 'A', 'O', 'Y', '.');
+
+    echo 'Email: '.strtolower(str_replace($replace_in_email, $replace_with, $ees)).$email;
+
+
+    ?>
+
+
+<hr>
+</body>
+</html>
+
+<?php
 
 $text =  "Lorem ipsum dolor sit amet.";
 $text2 =  "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.";
