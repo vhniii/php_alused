@@ -172,3 +172,16 @@ foreach ($sliceme as $var) {
     print "$var<br>";
 
 }
+
+
+echo '<br>';
+echo '<br>';
+
+
+sort ($sliceme);
+
+foreach ($sliceme as $key => $val) {
+
+    print "$key = $val<br>";
+
+}
