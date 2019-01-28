@@ -26,30 +26,14 @@
 
 
 <?php
-
-//if (!empty($_GET['leht'])) {
-//
-//    $leht = htmlspecialchars($_GET['leht']);
-//    $lubatud = array('kontakt');
-//    $kontroll = in_array($leht, $lubatud);
-//    if ($kontroll == true){
-//
-//        include($leht.'.php');
-//
-//    } else {
-//
-//        echo 'Lehte ei ole olemas!';
-//    }
-//
-//}
-
-$leht = $_GET['leht'];
-if(is_numeric($leht)){
-
-    include('leht'.$leht.'.php');
-
+if(!empty($_GET['leht'])){
+    $leht = htmlspecialchars($_GET['leht']);
+    if(is_file($leht.'.php')){
+        include($leht.'.php');
+    } else {
+        echo 'Ei eksisteeri, proovi uuesti!';
+    }
 }
-
 ?>
 
 
